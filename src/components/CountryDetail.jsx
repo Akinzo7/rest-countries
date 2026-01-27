@@ -9,11 +9,12 @@ const CountryDetail = ({ countries }) => {
   const country = countries.find((country) => country.name === name.name);
   console.log(country);
   if (!country) return <h1 className="mt-20 text-center">Country not found</h1>;
+  // Get border countries
   const borderCountries = country.borders?.map((border) => {
     if (border) {
       return countries.find((country) => country.alpha3Code === border);
     }
-  });
+  }).filter(Boolean);
   console.log(borderCountries);
 
   return (
@@ -40,23 +41,23 @@ const CountryDetail = ({ countries }) => {
             <div className="flex flex-col gap-2">
               <p className="font-light text-gray-400 text-[14px]">
                 <span className="text-white font-semibold">Native Name:</span>{" "}
-                {country.nativeName}
+                {country?.nativeName}
               </p>
               <p className="font-light text-gray-400 text-[14px]">
                 <span className="text-white font-semibold">Population:</span>{" "}
-                {country.population.toLocaleString()}
+                {country?.population.toLocaleString()}
               </p>
               <p className="font-light text-gray-400 text-[14px]">
                 <span className="text-white font-semibold">Region:</span>{" "}
-                {country.region}
+                {country?.region}
               </p>
               <p className="font-light text-gray-400 text-[14px]">
                 <span className="text-white font-semibold">Sub Region:</span>{" "}
-                {country.subregion}
+                {country?.subregion}
               </p>
               <p className="font-light text-gray-400 text-[14px]">
                 <span className="text-white font-semibold">Capital:</span>{" "}
-                {country.capital}
+                {country?.capital}
               </p>
             </div>
             <div className="flex flex-col gap-2">
@@ -64,15 +65,15 @@ const CountryDetail = ({ countries }) => {
                 <span className="text-white font-semibold">
                   Top Level Domain:
                 </span>{" "}
-                {country.topLevelDomain[0]}
+                {country?.topLevelDomain[0]}
               </p>
               <p className="font-light text-gray-400 text-[14px]">
                 <span className="text-white font-semibold">Currencies:</span>{" "}
-                {country.currencies[0].name}
+                {country?.currencies[0]?.name}
               </p>
               <p className="font-light text-gray-400 text-[14px]">
                 <span className="text-white font-semibold">Languages:</span>{" "}
-                {country.languages.map((lang) => lang.name).join(", ")}
+                {country?.languages?.map((lang) => lang.name).join(", ")}
               </p>
             </div>
           </div>
@@ -87,7 +88,7 @@ const CountryDetail = ({ countries }) => {
                         className="px-4 py-1 bg-[hsl(209,23%,22%)] text-[14px] text-gray-300 rounded-sm"
                         key={country.alpha3Code}
                       >
-                        {country.name.split(" ")[0]}
+                        {country?.name.split(" ")[0]}
                       </p>
                     ))}
                   </div>

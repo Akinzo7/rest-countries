@@ -9,7 +9,7 @@ const Filter = ({setRegion, region}) => {
     <div className="relative">
       <button
         type="button"
-        onClick={(e) => {setIsOpen(!isOpen)}}
+        onClick={() => {setIsOpen(prev => !prev); e.stopPropagation()}}
         className="bg-[hsl(209,23%,22%)] w-full text-white py-3 px-4 shadow-md rounded-sm flex gap-8 items-center text-[12px] cursor-pointer"
       >
         <span >{ region || "Filter by Region"}</span>
