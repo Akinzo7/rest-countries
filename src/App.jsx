@@ -12,7 +12,8 @@ function App() {
   const [region, setRegion] = useState("");
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
-
+  const [darkMode, setDarkMode] = useState(true);
+  // fetch data
   useEffect(() => {
     fetch("/data.json")
       .then((res) => res.json())
@@ -27,6 +28,12 @@ function App() {
       });
   }, []);
 
+  // dark mode
+  const handleToggleDarkMode = () => {
+    setDarkMode(!darkMode);
+  };
+
+  // filter countries
   const filteredCountries = countries.filter((country) => {
     const matchesSearch = country.name
       .toLowerCase()
@@ -36,9 +43,11 @@ function App() {
   });
 
   return (
-    <div className="flex flex-col min-h-screen w-full bg-[hsl(207,26%,17%)] text-[hsl(0,100%,100%)]">
-      <NavBar />
-
+    <div
+      className={`flex flex-col min-h-screen w-full ${darkMode ? "text-[hsl(0,100%,100%)] bg-[hsl(207,26%,17%)]" : "bg-[hsl(0,0%,98%)] text-[hsl(200,15%,8%)]"}`}
+    >
+      {" "}
+      <NavBar darkMode={darkMode} toggleDarkMode={handleToggleDarkMode} />
       <Routes>
         <Route
           path="/"
@@ -53,10 +62,7 @@ function App() {
               </div>
               {error && <div className="mt-10 px-15">{error.message}</div>}
               {isLoading && <div className="mt-10 px-15">Loading...</div>}
-              <CountryList
-                countries={filteredCountries}
-                setCountries={setCountries}
-              />
+              <CountryList countries={filteredCountries} />
             </main>
           }
         />

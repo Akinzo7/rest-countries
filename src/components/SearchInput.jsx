@@ -1,14 +1,7 @@
-import { useEffect, useState } from "react";
 import { IoMdSearch } from "react-icons/io";
 
 
 const SearchInput = ({searchTerm, setSearchTerm}) => {
-
-useEffect(()=>{
-console.log(searchTerm)
-}, [searchTerm])
-    
-
 
 
 
