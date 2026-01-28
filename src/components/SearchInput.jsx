@@ -1,7 +1,7 @@
 import { IoMdSearch } from "react-icons/io";
 
 
-const SearchInput = ({searchTerm, setSearchTerm}) => {
+const SearchInput = ({searchTerm, setSearchTerm, darkMode}) => {
 
 
 
@@ -9,14 +9,14 @@ const SearchInput = ({searchTerm, setSearchTerm}) => {
 
     <div className="w-full relative md:max-w-md">
         <div className="absolute inset-y-0 left-0 flex items-center pl-8 pointer-events-none">
-            <IoMdSearch/>
+            <IoMdSearch className={darkMode ? "text-white" : "text-[hsl(200,15%,8%)]"}/>
         </div>
         
       <input
         name="search"
         type="text"
         placeholder="Search for a country..."
-        className="bg-[hsl(209,23%,22%)] placeholder:text-[12px] w-full text-white py-3 pl-16 outline-none rounded-sm pr-4 shadow-md"
+        className={`${darkMode ? "bg-[hsl(209,23%,22%)] text-white" : "bg-white text-[hsl(200,15%,8%)]"} placeholder:text-[12px] w-full py-3 pl-16 outline-none rounded-sm pr-4 shadow-md`}
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
       />

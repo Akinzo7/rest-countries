@@ -44,7 +44,7 @@ function App() {
 
   return (
     <div
-      className={`flex flex-col min-h-screen w-full ${darkMode ? "text-[hsl(0,100%,100%)] bg-[hsl(207,26%,17%)]" : "bg-[hsl(0,0%,98%)] text-[hsl(200,15%,8%)]"}`}
+      className={`flex flex-col min-h-screen w-full ${darkMode ? " bg-[hsl(207,26%,17%)]" : "bg-[hsl(0,0%,98%)]"}`}
     >
       {" "}
       <NavBar darkMode={darkMode} toggleDarkMode={handleToggleDarkMode} />
@@ -57,18 +57,19 @@ function App() {
                 <SearchInput
                   searchTerm={searchTerm}
                   setSearchTerm={setSearchTerm}
+                  darkMode={darkMode}
                 />
-                <Filter region={region} setRegion={setRegion} />
+                <Filter region={region} darkMode={darkMode} setRegion={setRegion} />
               </div>
               {error && <div className="mt-10 px-15">{error.message}</div>}
               {isLoading && <div className="mt-10 px-15">Loading...</div>}
-              <CountryList countries={filteredCountries} />
+              <CountryList countries={filteredCountries} darkMode={darkMode} />
             </main>
           }
         />
         <Route
           path="/country/:name"
-          element={<CountryDetail countries={countries} />}
+          element={<CountryDetail darkMode={darkMode} countries={countries} />}
         />
       </Routes>
     </div>

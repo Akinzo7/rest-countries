@@ -11,10 +11,3 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-*{
-  color:inherit !important;
-}
-
-.text-inherit {
-  color: inherit !important;
-}
