@@ -52,8 +52,8 @@ function App() {
         <Route
           path="/"
           element={
-            <main className="px-15 mt-10">
-              <div className="flex justify-between">
+            <main className="md:px-15 px-5 mt-10">
+              <div className="flex flex-col gap-10 md:flex-row md:justify-between">
                 <SearchInput
                   searchTerm={searchTerm}
                   setSearchTerm={setSearchTerm}

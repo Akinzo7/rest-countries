@@ -17,7 +17,7 @@ const CountryDetail = ({ countries, darkMode }) => {
   console.log(borderCountries);
 
   return (
-    <div className="mt-13 px-15">
+    <div className="mt-13 px-5 md:px-15">
       <button
         className={`flex items-center justify-center ${darkMode ? "bg-[hsl(209,23%,22%)] text-white" : "bg-white text-black"} py-2 px-8 shadow-lg gap-2 rounded-sm text-[12px]`}
         type="button"
@@ -26,8 +26,8 @@ const CountryDetail = ({ countries, darkMode }) => {
         <HiArrowNarrowLeft />
         <span className="">Back</span>
       </button>
-      <div className="my-14 grid grid-cols-1 md:grid-cols-2 gap">
-        <div className="shadow-lg max-w-[600px] h-[400px] w-full rounded-lg  overflow-hidden">
+      <div className="my-14 grid grid-cols-1 md:grid-cols-2 gap-10">
+        <div className="shadow-lg md:max-w-[600px] md:h-[400px] w-full md:rounded-lg  overflow-hidden">
           <img
             src={country.flags.svg}
             alt={country.name}
@@ -36,7 +36,7 @@ const CountryDetail = ({ countries, darkMode }) => {
         </div>
         <div className="flex flex-col justify-center gap">
           <h3 className={`font-extrabold text-2xl ${darkMode ? "text-white" : "text-[hsl(200,15%,8%)]"}`}>{country.name}</h3>
-          <div className="flex  justify-between mt-5">
+          <div className="flex md:flex-row flex-col gap-5 justify-between mt-5">
             <div className="flex flex-col gap-2">
               <p className={`font-light ${darkMode ? "text-gray-400" : "text-gray-900"} text-[14px]`}>
                 <span className={`${darkMode ? "text-white" : "text-black"} font-semibold`}>Native Name:</span>{" "}
@@ -76,12 +76,12 @@ const CountryDetail = ({ countries, darkMode }) => {
               </p>
             </div>
           </div>
-          <div className="mt-14 flex items-center gap-2 ">
-            <div className="mt-14 flex items-center gap-2">
+          <div className="md:mt-14 mt-5 flex items-center gap-2 ">
+            <div className="mt-14 flex flex-col whitespace-nowrap md:flex-row md:items-start gap-5 md:gap-2">
               {borderCountries && (
                 <>
                   <h4 className={`font-semibold ${darkMode ? "text-white" : "text-black"}`}>Border Countries:</h4>
-                  <div className="flex items-center gap-2">
+                  <div className="flex items-center flex-wrap gap-2">
                     {borderCountries.map((country) => (
                       <p
                         className={`px-4 py-1 text-[14px] ${darkMode ? "bg-[hsl(209,23%,22%)] text-gray-300" : "bg-white border border-gray-200 text-black"} shadow-2xl rounded-sm`}
