@@ -1,4 +1,3 @@
-import NavBar from "./NavBar";
 import { HiArrowNarrowLeft } from "react-icons/hi";
 import { useNavigate, useParams } from "react-router-dom";
 
