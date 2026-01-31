@@ -1,4 +1,5 @@
 import { FaMoon } from "react-icons/fa";
+import { LuSunMedium } from "react-icons/lu";
 
 const NavBar = ({ toggleDarkMode, darkMode }) => {
   return (
@@ -13,7 +14,7 @@ const NavBar = ({ toggleDarkMode, darkMode }) => {
         type="button"
         className="flex items-center gap-2 "
       >
-        <FaMoon />
+      {  darkMode ?  <FaMoon className="text-black" /> : <LuSunMedium className="text-white" /> }
         <p>{darkMode ? "Dark Mode" : "Light Mode"}</p>
       </button>
     </div>
