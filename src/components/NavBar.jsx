@@ -14,7 +14,7 @@ const NavBar = ({ toggleDarkMode, darkMode }) => {
         type="button"
         className="flex items-center gap-2 "
       >
-      {  darkMode ?  <FaMoon className="text-black" /> : <LuSunMedium className="text-white" /> }
+      {  darkMode ?  <FaMoon className="text-white" /> : <LuSunMedium className="text-black" /> }
         <p>{darkMode ? "Dark Mode" : "Light Mode"}</p>
       </button>
     </div>

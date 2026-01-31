@@ -35,7 +35,7 @@ const Filter = ({ setRegion, region, darkMode }) => {
                 setRegion("");
                 setIsOpen(false);
               }}
-              className={`${darkMode ? "hover:bg-[hsl(207,26%,17%)]" : "hover:bg-[hsl(207,26%,17%)] hover:text-white"} hover:pl-6 hover:py-1 duration-200 transition-all`}
+              className={`${darkMode ? "hover:bg-[hsl(207,26%,17%)]" : "hover:bg-[hsl(207,26%,17%)] hover:text-white"} hover:pl-6 hover:pr-2 hover:py-1 duration-200 transition-all`}
             >
               All
             </li>
@@ -44,7 +44,7 @@ const Filter = ({ setRegion, region, darkMode }) => {
                 setRegion("Africa");
                 setIsOpen(false);
               }}
-              className={`${darkMode ? "hover:bg-[hsl(207,26%,17%)]" : "hover:bg-[hsl(207,26%,17%)] hover:text-white"} hover:pl-6 hover:py-1 duration-200 transition-all`}
+              className={`${darkMode ? "hover:bg-[hsl(207,26%,17%)]" : "hover:bg-[hsl(207,26%,17%)] hover:text-white"} hover:pl-6 hover:pr-2 hover:py-1 duration-200 transition-all`}
             >
               Africa
             </li>
@@ -53,7 +53,7 @@ const Filter = ({ setRegion, region, darkMode }) => {
                 setRegion("Americas");
                 setIsOpen(false);
               }}
-              className={`${darkMode ? "hover:bg-[hsl(207,26%,17%)]" : "hover:bg-[hsl(207,26%,17%)] hover:text-white"} hover:pl-6 hover:py-1 duration-200 transition-all`}
+              className={`${darkMode ? "hover:bg-[hsl(207,26%,17%)]" : "hover:bg-[hsl(207,26%,17%)] hover:text-white"} hover:pl-6 hover:pr-2 hover:py-1 duration-200 transition-all`}
             >
               Americas
             </li>
@@ -62,7 +62,7 @@ const Filter = ({ setRegion, region, darkMode }) => {
                 setRegion("Asia");
                 setIsOpen(false);
               }}
-              className={`${darkMode ? "hover:bg-[hsl(207,26%,17%)]" : "hover:bg-[hsl(207,26%,17%)] hover:text-white"} hover:pl-6 hover:py-1 duration-200 transition-all`}
+              className={`${darkMode ? "hover:bg-[hsl(207,26%,17%)]" : "hover:bg-[hsl(207,26%,17%)] hover:text-white"} hover:pl-6 hover:pr-2 hover:py-1 duration-200 transition-all`}
             >
               Asia
             </li>
@@ -71,7 +71,7 @@ const Filter = ({ setRegion, region, darkMode }) => {
                 setRegion("Europe");
                 setIsOpen(false);
               }}
-              className={`${darkMode ? "hover:bg-[hsl(207,26%,17%)]" : "hover:bg-[hsl(207,26%,17%)] hover:text-white"} hover:pl-6 hover:py-1 duration-200 transition-all`}
+              className={`${darkMode ? "hover:bg-[hsl(207,26%,17%)]" : "hover:bg-[hsl(207,26%,17%)] hover:text-white"} hover:pl-6 hover:pr-2 hover:py-1 duration-200 transition-all`}
             >
               Europe
             </li>
@@ -80,7 +80,7 @@ const Filter = ({ setRegion, region, darkMode }) => {
                 setRegion("Oceania");
                 setIsOpen(false);
               }}
-              className={`${darkMode ? "hover:bg-[hsl(207,26%,17%)]" : "hover:bg-[hsl(207,26%,17%)] hover:text-white"} hover:pl-6 hover:py-1 duration-200 transition-all`}
+              className={`${darkMode ? "hover:bg-[hsl(207,26%,17%)]" : "hover:bg-[hsl(207,26%,17%)] hover:text-white"} hover:pl-6 hover:pr-2 hover:py-1 duration-200 transition-all`}
             >
               Oceania
             </li>
